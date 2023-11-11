@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+<p th:text="${'Мероприятие: ' + event.getTitle()}">VALUE</p>
+<br/>
+<hr/>
+Информация о мероприятие:
+<br/>
+<p th:text="${'Адрес: ' + event.getAddress()}">VALUE</p>
+<p th:text="${'Тип мероприятия: ' + event.getTypeVisitor()}">VALUE</p>
+<p th:text="${'Цена: ' + event.getPrice()}">VALUE</p>
+<p th:text="${'Дата мероприятия: ' + event.getDay()}">VALUE</p>
+<p th:text="${'Время начала мероприятия: ' + event.getBegin().getHours() + ':' + event.getBegin().getMinutes() +
+':' + event.getBegin().getSeconds()}">VALUE</p>
+<p th:text="${'Время конца мероприятия: ' + event.getEnd().getHours() + ':' + event.getEnd().getMinutes() +
+':' + event.getEnd().getSeconds()}">VALUE</p>
+<p th:text="${'Количество свободных мест: ' + event.getCountVisitor()}">VALUE</p>
+<p th:text="${'Описание: ' + event.getDescription()}">VALUE</p>
+
+
+</body>
+</html>

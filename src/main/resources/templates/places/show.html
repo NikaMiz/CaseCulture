@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+<p th:text="${place.getTitle()}">VALUE</p>
+<br/>
+<hr/>
+Информация:
+<br/>
+<p th:text="${'Адрес: ' + place.getAddress()}">VALUE</p>
+<p th:text="${'Начало работы: ' + place.getBegin().getHours() + ':' + place.getBegin().getMinutes() +
+':' + place.getBegin().getSeconds()}">VALUE</p>
+<p th:text="${'Конец работы: ' + place.getEnd().getHours() + ':' + place.getEnd().getMinutes() +
+':' + place.getEnd().getSeconds()}">VALUE</p>
+<p th:text="${'Описание: ' + place.getDescription()}">VALUE</p>
+
+
+</body>
+</html>
