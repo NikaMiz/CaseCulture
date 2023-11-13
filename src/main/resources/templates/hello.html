@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        hr {
+            width: 50%;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            border: 1px solid #dee2e6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 20px;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            width: 160px;
+            height: 35px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        a:active {
+            background-color: #003366;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Hello</title>
 </head>
 <body>
-Что вас интересует?
-<br/>
-<hr/>
-
-<a href="/places">Места</a>
-<br/>
-<a href="/events">Мероприятия</a>
-<br/>
-<a href="/routes">Маршруты</a>
-
+<h3>Что вас интересует?</h3>
+<p><a href="/places">Места</a> <a href="/events">Мероприятия</a><br><a href="/routes">Маршруты</a></p>
 </body>
 </html>

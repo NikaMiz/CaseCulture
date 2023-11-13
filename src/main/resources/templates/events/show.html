@@ -1,26 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        hr {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        a:active {
+            background-color: #003366;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Show</title>
 </head>
 <body>
-<p th:text="${'Мероприятие: ' + event.getTitle()}">VALUE</p>
-<br/>
+<h3>Мероприятие</h3>
 <hr/>
-Информация о мероприятие:
+<h2>Информация о мероприятии:</h2>
 <br/>
 <p th:text="${'Адрес: ' + event.getAddress()}">VALUE</p>
 <p th:text="${'Тип мероприятия: ' + event.getTypeVisitor()}">VALUE</p>
 <p th:text="${'Цена: ' + event.getPrice()}">VALUE</p>
 <p th:text="${'Дата мероприятия: ' + event.getDay()}">VALUE</p>
-<p th:text="${'Время начала мероприятия: ' + event.getBegin().getHours() + ':' + event.getBegin().getMinutes() +
-':' + event.getBegin().getSeconds()}">VALUE</p>
-<p th:text="${'Время конца мероприятия: ' + event.getEnd().getHours() + ':' + event.getEnd().getMinutes() +
-':' + event.getEnd().getSeconds()}">VALUE</p>
+<p th:text="${'Время начала мероприятия: ' + event.getBegin().getHours() + ':' + event.getBegin().getMinutes() + ':' + event.getBegin().getSeconds()}">VALUE</p>
+<p th:text="${'Время конца мероприятия: ' + event.getEnd().getHours() + ':' + event.getEnd().getMinutes() + ':' + event.getEnd().getSeconds()}">VALUE</p>
 <p th:text="${'Количество свободных мест: ' + event.getCountVisitor()}">VALUE</p>
 <p th:text="${'Описание: ' + event.getDescription()}">VALUE</p>
-
-
+<br/>
+<a href="/events">Вернуться к списку мероприятий</a>
 </body>
 </html>

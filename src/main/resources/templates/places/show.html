@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        hr {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+        }
+
+        h3 {
+            margin: 10px 0;
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+            margin: 10px 0;
+            padding: 10px 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        a:active {
+            background-color: #003366;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Show</title>
 </head>
 <body>
-<p th:text="${place.getTitle()}">VALUE</p>
+<h3 th:text="${place.getTitle()}">VALUE</h3>
 <br/>
 <hr/>
-Информация:
+<h2>Информация:</h2>
 <br/>
 <p th:text="${'Адрес: ' + place.getAddress()}">VALUE</p>
 <p th:text="${'Начало работы: ' + place.getBegin().getHours() + ':' + place.getBegin().getMinutes() +
@@ -16,7 +68,8 @@
 <p th:text="${'Конец работы: ' + place.getEnd().getHours() + ':' + place.getEnd().getMinutes() +
 ':' + place.getEnd().getSeconds()}">VALUE</p>
 <p th:text="${'Описание: ' + place.getDescription()}">VALUE</p>
-
+<br/>
+<a href="/places">Вернуться к списку мест</a>
 
 </body>
 </html>
